@@ -13,6 +13,8 @@ def mix_array(keyword1s, keyword2s, keyword3s=None):
 def append(results, mixed_array):
     for row in mixed_array:
         keyword = (' '.join(str(e) for e in row))
+        if (keyword.endswith(" ")):
+            continue
         keyword = keyword.strip()
         if (keyword not in results):
             results.append(keyword)
